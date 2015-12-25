@@ -1,79 +1,156 @@
-		<!DOCTYPE html>
-		<html>
-		<head>
-		<script type="text/javascript">
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <script type="text/javascript">
 
-		var cubeList;
+    const NUM_PLAYERS = 8;
+    const NUM_PACKS = 3;
+    const CARDS_PER_PACK = 15;
+    var cubeList;
+    var packs = [];
+    var playerPicks = [];
+    var playerPickDivs = [];
 
-		/**
-		 * Randomize array element order in-place.
-		 * Using Durstenfeld shuffle algorithm.
-		 */
-		function shuffleArray(array) {
-		    for (var i = array.length - 1; i > 0; i--) {
-		        var j = Math.floor(Math.random() * (i + 1));
-		        var temp = array[i];
-		        array[i] = array[j];
-		        array[j] = temp;
-		    }
-		    return array;
-		}
+    var currentPack = 0;
+    var currentPick = 0;
+    var currentPlayer = 0;
 
-		function openFile(event) {
-	    var input = event.target;
+    function initialize(rawCubeList) {
+      cubeList = rawCubeList.split('\n');
+      shuffleArray(cubeList);
 
-	    var reader = new FileReader();
-	    reader.onload = function(){
-	      cubeList = reader.result.split('\n');
-	      shuffleArray(cubeList);
+      for (var i = 0; i < NUM_PLAYERS * NUM_PACKS; i++) {
+      	var newPack = [];
+      	for (var j = 0; j < CARDS_PER_PACK; j++) {
+      		console.log("creating pack: " + cubeList[i * CARDS_PER_PACK + j]);
+      		newPack.push(cubeList[i * CARDS_PER_PACK + j]);
+      	}
+      	packs.push(newPack);
+      }
 
-	      pack = [];
-	      for (var i = 0; i < 15; i++) {
-	      	pack.push(cubeList[i]);
-	      }
+      for (var i = 0; i < NUM_PLAYERS; i++) {
+      	playerPicks.push([]);
+        var picksDiv = document.createElement("div");
+        var picksLabel = document.createElement("p");
+        picksLabel.appendChild(document.createTextNode(`Player ${i+1} Picks`));
+        picksDiv.appendChild(picksLabel);
+        toggleDisplay(picksDiv);
 
-	      document.getElementById("display").innerHTML = "";
-	      pack.forEach(function(x) {
-	      	var imageTag = createCardImageTag(x);
-	      	imageTag.addEventListener("click", function() {
-	      		addToPicks(x);
-	      		imageTag.remove();
-	      	});
+        playerPickDivs[i] = picksDiv;
+        document.getElementById("picksDisplay").appendChild(picksDiv);
+      }
 
-	      	document.getElementById("display").appendChild(imageTag);
-	      });
-	    };
-	    reader.readAsText(input.files[0]);
-	  };
+      toggleDisplay(playerPickDivs[0]);
+      displayPack(packs[0]);
+    }
 
-	  function createCardImageTag(cardName) {
-	    var imageUrl = `http://gatherer.wizards.com/Handlers/Image.ashx?name=${cardName}&type=card`;
+    function displayPack(pack) {
+      document.getElementById("display").innerHTML = "";
+      pack.forEach(function(cardName) {
+        var imageTag = createCardImageTag(cardName);
+        imageTag.addEventListener("click", function() {
+          addToPicks(cardName);
+          imageTag.remove();
+        });
 
-	    var imageTag = document.createElement("img");
-	    imageTag.setAttribute("src", imageUrl);
-	    return imageTag;  	
-	  }
+        document.getElementById("display").appendChild(imageTag);
+      });
+    }
 
-	  function addToPicks(pickedCard) {
-	  	console.log("addToPicks:" + pickedCard);
-	  	var imageTag = createCardImageTag(pickedCard);
-	  	document.getElementById("picksDisplay").appendChild(imageTag);
-	  }
+    function addToPicks(pickedCard) {
+      console.log(`P${currentPack+1}P${currentPick+1} Player ${currentPlayer+1} picked: ${pickedCard}`);
 
-		</script>
-		</head>
-		<body>
+      var imageTag = createCardImageTag(pickedCard);
+      playerPickDivs[currentPlayer].appendChild(imageTag);
+      playerPicks[currentPlayer].push(pickedCard);
 
-		<input type='file' accept='text/plain' onchange='openFile(event)'><br>
-		<!--<img src="http://gatherer.wizards.com/Handlers/Image.ashx?name=Temple%20of%20Abandon&type=card" alt=\"\" onclick="addToPicks('Ajani\'s Presence')"/>-->
-		<div id="display"></div>
-		<p>Picks:</p>
-		<div id="picksDisplay"></div>
+      removeFromArray(getActivePack(), pickedCard);
+      toggleDisplay(playerPickDivs[currentPlayer]);
 
-		<!--
-		<div id="demo"><h2>Let AJAX change this text</h2></div>
+      currentPlayer++;
+      if (currentPlayer == NUM_PLAYERS) {
+      	currentPick++;
+      	currentPlayer = 0;
+      }
+      if (currentPick == CARDS_PER_PACK) {
+      	currentPack++;
+      	currentPick = 0;
+      }
 
-		<button type="button" onclick="loadDoc()">Change Content</button>-->
+      toggleDisplay(playerPickDivs[currentPlayer]);
+      displayPack(getActivePack());
+    }
 
-		</body>
-		</html> 
+    function getActivePack() {
+      console.log(`currentPack: ${currentPack} currentPlayer: ${currentPlayer} currentPick: ${currentPick}`);
+      var direction = (currentPack % 2 == 0) ? 1 : -1;
+      var pickOffset = direction * currentPick;
+      var index = (NUM_PLAYERS * currentPack) + mod(currentPlayer + pickOffset, NUM_PLAYERS);
+      console.log("activePack:" + index);
+      return packs[index];
+    }
+
+    function toggleDisplay(element) {
+      if(element.style.display !== 'none') {
+        element.style.display = 'none';
+      } else {
+        element.style.display = 'block';
+      }
+    }
+
+    function createCardImageTag(cardName) {
+      var imageUrl = `http://gatherer.wizards.com/Handlers/Image.ashx?name=${cardName}&type=card`;
+
+      var imageTag = document.createElement("img");
+      imageTag.setAttribute("src", imageUrl);
+      return imageTag;    
+    }
+
+    /* Version of modulus which always returns a positive value. */
+    function mod(n, m) {
+      return ((n % m) + m) % m;
+    }
+
+    /**
+     * Randomize array element order in-place.
+     * Using Durstenfeld shuffle algorithm.
+     */
+    function shuffleArray(array) {
+        for (var i = array.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+        return array;
+    }
+
+    function removeFromArray(arr, value) {
+      var index = arr.indexOf(value);
+      if (index >= 0) {
+        arr.splice(index, 1);
+      }
+    }
+
+    function openFile(event) {
+      var input = event.target;
+
+      var reader = new FileReader();
+      reader.onload = function(){
+        initialize(reader.result);
+      };
+      reader.readAsText(input.files[0]);
+    };
+
+    </script>
+    </head>
+    <body>
+
+    <input type='file' accept='text/plain' onchange='openFile(event)'><br>
+
+    <div id="display"></div>
+    <div id="picksDisplay">
+    </div>
+
+    </body>
+    </html>

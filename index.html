@@ -1,0 +1,79 @@
+		<!DOCTYPE html>
+		<html>
+		<head>
+		<script type="text/javascript">
+
+		var cubeList;
+
+		/**
+		 * Randomize array element order in-place.
+		 * Using Durstenfeld shuffle algorithm.
+		 */
+		function shuffleArray(array) {
+		    for (var i = array.length - 1; i > 0; i--) {
+		        var j = Math.floor(Math.random() * (i + 1));
+		        var temp = array[i];
+		        array[i] = array[j];
+		        array[j] = temp;
+		    }
+		    return array;
+		}
+
+		function openFile(event) {
+	    var input = event.target;
+
+	    var reader = new FileReader();
+	    reader.onload = function(){
+	      cubeList = reader.result.split('\n');
+	      shuffleArray(cubeList);
+
+	      pack = [];
+	      for (var i = 0; i < 15; i++) {
+	      	pack.push(cubeList[i]);
+	      }
+
+	      document.getElementById("display").innerHTML = "";
+	      pack.forEach(function(x) {
+	      	var imageTag = createCardImageTag(x);
+	      	imageTag.addEventListener("click", function() {
+	      		addToPicks(x);
+	      		imageTag.remove();
+	      	});
+
+	      	document.getElementById("display").appendChild(imageTag);
+	      });
+	    };
+	    reader.readAsText(input.files[0]);
+	  };
+
+	  function createCardImageTag(cardName) {
+	    var imageUrl = `http://gatherer.wizards.com/Handlers/Image.ashx?name=${cardName}&type=card`;
+
+	    var imageTag = document.createElement("img");
+	    imageTag.setAttribute("src", imageUrl);
+	    return imageTag;  	
+	  }
+
+	  function addToPicks(pickedCard) {
+	  	console.log("addToPicks:" + pickedCard);
+	  	var imageTag = createCardImageTag(pickedCard);
+	  	document.getElementById("picksDisplay").appendChild(imageTag);
+	  }
+
+		</script>
+		</head>
+		<body>
+
+		<input type='file' accept='text/plain' onchange='openFile(event)'><br>
+		<!--<img src="http://gatherer.wizards.com/Handlers/Image.ashx?name=Temple%20of%20Abandon&type=card" alt=\"\" onclick="addToPicks('Ajani\'s Presence')"/>-->
+		<div id="display"></div>
+		<p>Picks:</p>
+		<div id="picksDisplay"></div>
+
+		<!--
+		<div id="demo"><h2>Let AJAX change this text</h2></div>
+
+		<button type="button" onclick="loadDoc()">Change Content</button>-->
+
+		</body>
+		</html> 

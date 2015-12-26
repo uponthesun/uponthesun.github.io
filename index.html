@@ -6,16 +6,47 @@
     const NUM_PLAYERS = 8;
     const NUM_PACKS = 3;
     const CARDS_PER_PACK = 15;
+    const DEFAULT_CUBE_FILE = "winstons_cube.txt";
     var cubeList;
-    var packs = [];
-    var playerPicks = [];
-    var playerPickDivs = [];
+    var packs;
+    var playerPicks;
+    var playerPickDivs;
 
-    var currentPack = 0;
-    var currentPick = 0;
-    var currentPlayer = 0;
+    /* Variables for tracking the current state of the draft. All are 0-indexed. */
+    // Current pack being drafted, i.e. a normal draft has 3 packs
+    var currentPack;
+    // Current pick in the pack.
+    var currentPick;
+    // The seat for which the user is making the pick for; the user makes the picks for every seat in the simulated draft.
+    var currentSeat;
 
+    initializeDefaultCube();
+
+    /* Retrieve default cube file and initialize draft with it. */ 
+    function initializeDefaultCube() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if(xhttp.readyState == 4 && xhttp.status==200) {
+          console.log("responsetext: " + xhttp.responsetext);
+          initialize(xhttp.responsetext);
+        }
+      }
+
+      xhttp.open("GET", DEFAULT_CUBE_FILE);
+      xhttp.send();
+    }
+
+    /* Initialize the draft with the given cube list. The list should be given as string of newline-separated card names.
+     * Can be called multiple times; each time it is called, the entire draft will restart. */
     function initialize(rawCubeList) {
+      packs = [];
+      playerPicks = [];
+      playerPickDivs = [];
+
+      currentPack = 0;
+      currentPick = 0;
+      currentSeat = 0;
+
       cubeList = rawCubeList.split('\n');
       shuffleArray(cubeList);
 
@@ -28,6 +59,7 @@
       	packs.push(newPack);
       }
 
+      document.getElementById("picksDisplay").innerHTML = "";
       for (var i = 0; i < NUM_PLAYERS; i++) {
       	playerPicks.push([]);
         var picksDiv = document.createElement("div");
@@ -58,34 +90,34 @@
     }
 
     function addToPicks(pickedCard) {
-      console.log(`P${currentPack+1}P${currentPick+1} Player ${currentPlayer+1} picked: ${pickedCard}`);
+      console.log(`P${currentPack+1}P${currentPick+1} Player ${currentSeat+1} picked: ${pickedCard}`);
 
       var imageTag = createCardImageTag(pickedCard);
-      playerPickDivs[currentPlayer].appendChild(imageTag);
-      playerPicks[currentPlayer].push(pickedCard);
+      playerPickDivs[currentSeat].appendChild(imageTag);
+      playerPicks[currentSeat].push(pickedCard);
 
       removeFromArray(getActivePack(), pickedCard);
-      toggleDisplay(playerPickDivs[currentPlayer]);
+      toggleDisplay(playerPickDivs[currentSeat]);
 
-      currentPlayer++;
-      if (currentPlayer == NUM_PLAYERS) {
+      currentSeat++;
+      if (currentSeat == NUM_PLAYERS) {
       	currentPick++;
-      	currentPlayer = 0;
+      	currentSeat = 0;
       }
       if (currentPick == CARDS_PER_PACK) {
       	currentPack++;
       	currentPick = 0;
       }
 
-      toggleDisplay(playerPickDivs[currentPlayer]);
+      toggleDisplay(playerPickDivs[currentSeat]);
       displayPack(getActivePack());
     }
 
     function getActivePack() {
-      console.log(`currentPack: ${currentPack} currentPlayer: ${currentPlayer} currentPick: ${currentPick}`);
+      console.log(`currentPack: ${currentPack} currentSeat : ${currentSeat} currentPick: ${currentPick}`);
       var direction = (currentPack % 2 == 0) ? 1 : -1;
       var pickOffset = direction * currentPick;
-      var index = (NUM_PLAYERS * currentPack) + mod(currentPlayer + pickOffset, NUM_PLAYERS);
+      var index = (NUM_PLAYERS * currentPack) + mod(currentSeat + pickOffset, NUM_PLAYERS);
       console.log("activePack:" + index);
       return packs[index];
     }

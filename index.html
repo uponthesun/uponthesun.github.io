@@ -11,6 +11,7 @@
     var packs;
     var playerPicks;
     var playerPickDivs;
+    var playerPickHistory; 
 
     /* Variables for tracking the current state of the draft. All are 0-indexed. */
     // Current pack being drafted, i.e. a normal draft has 3 packs
@@ -51,6 +52,7 @@
       packs = [];
       playerPicks = [];
       playerPickDivs = [];
+      playerPickHistory = [];
 
       currentPack = 0;
       currentPick = 0;
@@ -59,15 +61,16 @@
       cubeList = rawCubeList.split('\n');
       shuffleArray(cubeList);
 
+      // Create all of the packs to be used in the draft.
       for (var i = 0; i < NUM_PLAYERS * NUM_PACKS; i++) {
       	var newPack = [];
       	for (var j = 0; j < CARDS_PER_PACK; j++) {
-      		console.log("creating pack: " + cubeList[i * CARDS_PER_PACK + j]);
       		newPack.push(cubeList[i * CARDS_PER_PACK + j]);
       	}
       	packs.push(newPack);
       }
 
+      // Create a div to display picks for each seat. 
       document.getElementById("picksDisplay").innerHTML = "";
       for (var i = 0; i < NUM_PLAYERS; i++) {
       	playerPicks.push([]);
@@ -79,33 +82,60 @@
 
         playerPickDivs[i] = picksDiv;
         document.getElementById("picksDisplay").appendChild(picksDiv);
+
+        playerPickHistory.push([]);
       }
 
+      // Display the first pack.
       toggleDisplay(playerPickDivs[0]);
       displayPack(packs[0]);
     }
 
+    // Shows the given pack in the div for displaying the current pack. Input is an array of card names.
     function displayPack(pack) {
-      document.getElementById("display").innerHTML = "";
+      var packDisplayDiv = document.getElementById("display");
+      packDisplayDiv.innerHTML = "";
       pack.forEach(function(cardName) {
         var imageTag = createCardImageTag(cardName);
+        // Add a listener for advancing the draft when a card is clicked, i.e. picked.
         imageTag.addEventListener("click", function() {
           addToPicks(cardName);
-          imageTag.remove();
         });
 
-        document.getElementById("display").appendChild(imageTag);
+        packDisplayDiv.appendChild(imageTag);
       });
     }
 
+    // Shows the given pack in the div for displaying the pack history. Input is an array of card names.
+    function displayHistory(pack) {
+      var historyDiv = document.getElementById("historyDisplay");
+      historyDiv.innerHTML = "";
+      var label = document.createElement("p");
+      label.appendChild(document.createTextNode("Original Pack"));
+      historyDiv.appendChild(label);
+      pack.forEach(function(cardName) {
+        var imageTag = createCardImageTag(cardName);
+        historyDiv.appendChild(imageTag);
+      });
+    }
+
+    /* Adds the given card to the current player's picks, and advances the draft. */
     function addToPicks(pickedCard) {
       console.log(`P${currentPack+1}P${currentPick+1} Player ${currentSeat+1} picked: ${pickedCard}`);
 
-      var imageTag = createCardImageTag(pickedCard);
-      playerPickDivs[currentSeat].appendChild(imageTag);
       playerPicks[currentSeat].push(pickedCard);
+      var activePack = getActivePack();
+      playerPickHistory[currentSeat].push(activePack.slice());
+      removeFromArray(activePack, pickedCard);
 
-      removeFromArray(getActivePack(), pickedCard);
+      var packHistorySeat = currentSeat;
+      var packHistoryPick = currentPick;
+      var imageTag = createCardImageTag(pickedCard);
+      imageTag.addEventListener("mouseover", function() {
+        //imageTag.style.outline = 'thick solid red';
+        displayHistory(playerPickHistory[packHistorySeat][packHistoryPick]);
+      });
+      playerPickDivs[currentSeat].appendChild(imageTag);
       toggleDisplay(playerPickDivs[currentSeat]);
 
       currentSeat++;
@@ -117,10 +147,13 @@
       	currentPack++;
       	currentPick = 0;
       }
+
+      document.getElementById("historyDisplay").innerHTML = "";
       if (currentPack == NUM_PACKS) {
         finishDraft();
       } else {
         toggleDisplay(playerPickDivs[currentSeat]);
+        //console.log("pickHistory: " + JSON.stringify(playerPickHistory[currentSeat]));
         displayPack(getActivePack());
       }
     }
@@ -188,9 +221,10 @@
 
     <input type='file' accept='text/plain' onchange='initializeFromFile(event)'><br>
 
+    <p>Current Pack</p>
     <div id="display"></div>
-    <div id="picksDisplay">
-    </div>
+    <div id="picksDisplay"></div>
+    <div id="historyDisplay"></div>
 
     </body>
     </html>

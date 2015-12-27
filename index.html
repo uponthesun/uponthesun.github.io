@@ -3,7 +3,7 @@
     <head>
     <script type="text/javascript">
 
-    const NUM_PLAYERS = 8;
+    const NUM_PLAYERS = 6;
     const NUM_PACKS = 3;
     const CARDS_PER_PACK = 15;
     const DEFAULT_CUBE_FILE = "winstons_cube.txt";
@@ -129,7 +129,7 @@
       removeFromArray(activePack, pickedCard);
 
       var packHistorySeat = currentSeat;
-      var packHistoryPick = currentPick;
+      var packHistoryPick = currentPack * CARDS_PER_PACK + currentPick;
       var imageTag = createCardImageTag(pickedCard);
       imageTag.addEventListener("mouseover", function() {
         //imageTag.style.outline = 'thick solid red';
@@ -159,6 +159,7 @@
     }
 
     function finishDraft() {
+      document.getElementById("display").innerHTML = "";
       playerPickDivs.forEach(function(pickDiv) {
         pickDiv.style.display = 'block';
       })

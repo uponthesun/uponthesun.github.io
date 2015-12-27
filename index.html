@@ -35,6 +35,16 @@
       xhttp.send();
     }
 
+    function initializeFromFile(event) {
+      var input = event.target;
+
+      var reader = new FileReader();
+      reader.onload = function(){
+        initialize(reader.result);
+      };
+      reader.readAsText(input.files[0]);
+    };
+
     /* Initialize the draft with the given cube list. The list should be given as string of newline-separated card names.
      * Can be called multiple times; each time it is called, the entire draft will restart. */
     function initialize(rawCubeList) {
@@ -107,9 +117,18 @@
       	currentPack++;
       	currentPick = 0;
       }
+      if (currentPack == NUM_PACKS) {
+        finishDraft();
+      } else {
+        toggleDisplay(playerPickDivs[currentSeat]);
+        displayPack(getActivePack());
+      }
+    }
 
-      toggleDisplay(playerPickDivs[currentSeat]);
-      displayPack(getActivePack());
+    function finishDraft() {
+      playerPickDivs.forEach(function(pickDiv) {
+        pickDiv.style.display = 'block';
+      })
     }
 
     function getActivePack() {
@@ -137,14 +156,14 @@
       return imageTag;    
     }
 
-    /* Version of modulus which always returns a positive value. */
+    /* Version of modulus which always returns a positive value. E.g. -15 mod 8 returns 1, instead of -7. */
     function mod(n, m) {
       return ((n % m) + m) % m;
     }
 
     /**
+     * Taken from: http://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array/12646864#12646864
      * Randomize array element order in-place.
-     * Using Durstenfeld shuffle algorithm.
      */
     function shuffleArray(array) {
         for (var i = array.length - 1; i > 0; i--) {
@@ -163,21 +182,11 @@
       }
     }
 
-    function openFile(event) {
-      var input = event.target;
-
-      var reader = new FileReader();
-      reader.onload = function(){
-        initialize(reader.result);
-      };
-      reader.readAsText(input.files[0]);
-    };
-
     </script>
     </head>
     <body>
 
-    <input type='file' accept='text/plain' onchange='openFile(event)'><br>
+    <input type='file' accept='text/plain' onchange='initializeFromFile(event)'><br>
 
     <div id="display"></div>
     <div id="picksDisplay">

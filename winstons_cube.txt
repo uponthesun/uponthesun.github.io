@@ -401,6 +401,7 @@ Safehold Elite
 Saffi Eriksdotter
 Selesnya Guildmage
 Knight of the Reliquary
+Thrill of the Hunt
 Crown of Convergence
 Cartel Aristocrat
 Restless Apparition
@@ -412,7 +413,6 @@ Hag Hedge-Mage
 Varolz, the Scar-Striped
 Life // Death
 Maelstrom Pulse
-Nyx Weaver
 Coiling Oracle
 Plaxmanta
 Zameck Guildmage

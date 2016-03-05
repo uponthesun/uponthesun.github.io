@@ -166,6 +166,7 @@
       
       // Display text list of all picks
       var allPicks = document.createElement("textarea");
+	  allPicks.setAttribute("id","PicksToText");
       allPicks.setAttribute("readonly", "");
       allPicks.setAttribute("rows", "8");
       allPicks.setAttribute("cols", "50");
@@ -185,8 +186,22 @@
       }
       allPicks.textContent += allPicksText;
       document.body.insertBefore(allPicks, null);
+	  
+	  //Create button to allow users to download draft information.
+	  var downloadButton = document.createElement("input");
+	  downloadButton.type = "button";
+	  downloadButton.value = "Download!";
+	  downloadButton.onClick = downloadPicks;
     }
 
+	//Get the contents of the PicksToText text box and download them as a text file
+	function downloadPicks()
+	{
+		var pickValues = document.getElementById('PicksToText').value;
+		window.open('data:text/csv,' + encodeURIComponent(pickValues))
+		
+	}
+	
     function getActivePack() {
       console.log(`currentPack: ${currentPack} currentSeat : ${currentSeat} currentPick: ${currentPick}`);
       var direction = (currentPack % 2 == 0) ? 1 : -1;
@@ -195,7 +210,7 @@
       console.log("activePack:" + index);
       return packs[index];
     }
-
+	
     function toggleDisplay(element) {
       if(element.style.display !== 'none') {
         element.style.display = 'none';
@@ -243,7 +258,7 @@
     <body>
 
     <input type='file' accept='text/plain' onchange='initializeFromFile(event)'><br>
-
+	
     <p>Current Pack</p>
     <div id="display"></div>
     <div id="picksDisplay"></div>

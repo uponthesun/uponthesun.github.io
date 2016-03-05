@@ -6,7 +6,7 @@
     const NUM_PLAYERS = 6;
     const NUM_PACKS = 3;
     const CARDS_PER_PACK = 15;
-    const DEFAULT_CUBE_FILE = "winstons_cube_1-9-2016.txt";
+    const DEFAULT_CUBE_FILE = "winstons_cube_3-4-2016.txt";
     var cubeList;
     var packs;
     var playerPicks;
@@ -163,6 +163,28 @@
       playerPickDivs.forEach(function(pickDiv) {
         pickDiv.style.display = 'block';
       })
+      
+      // Display text list of all picks
+      var allPicks = document.createElement("textarea");
+      allPicks.setAttribute("readonly", "");
+      allPicks.setAttribute("rows", "8");
+      allPicks.setAttribute("cols", "50");
+
+      allPicksText = "";
+      for(var i = 0; i < NUM_PLAYERS; i++) {
+        pickNumber = 0;
+        allPicksText += "* Player " + (i + 1) + "\n";
+        playerPicks[i].forEach(function(pick) {
+            if(pickNumber % CARDS_PER_PACK == 0) {
+                allPicksText += "\n";
+            }
+            allPicksText += pick + '\n';
+            pickNumber++;
+        })
+        allPicksText += "\n";
+      }
+      allPicks.textContent += allPicksText;
+      document.body.insertBefore(allPicks, null);
     }
 
     function getActivePack() {

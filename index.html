@@ -5,7 +5,7 @@
 
     const NUM_PLAYERS = 6;
     const NUM_PACKS = 3;
-    const CARDS_PER_PACK = 15;
+    const CARDS_PER_PACK = 1;
     const DEFAULT_CUBE_FILE = "winstons_cube_3-4-2016.txt";
     var cubeList;
     var packs;
@@ -163,7 +163,7 @@
       playerPickDivs.forEach(function(pickDiv) {
         pickDiv.style.display = 'block';
       })
-      
+
       // Display text list of all picks
       var allPicks = document.createElement("textarea");
 	  allPicks.setAttribute("id","PicksToText");
@@ -191,17 +191,18 @@
 	  var downloadButton = document.createElement("input");
 	  downloadButton.type = "button";
 	  downloadButton.value = "Download!";
-	  downloadButton.onClick = downloadPicks;
+	  var pickValues = document.getElementById('PicksToText').value;
+	  downloadButton.addEventListener('click', function() { downloadPicks(pickValues); },false);
+	  document.body.insertBefore(downloadButton, null);
     }
 
-	//Get the contents of the PicksToText text box and download them as a text file
-	function downloadPicks()
+	//Get the contents of the a string and download them as a text file
+	function downloadPicks(pickInfo)
 	{
-		var pickValues = document.getElementById('PicksToText').value;
-		window.open('data:text/csv,' + encodeURIComponent(pickValues))
-		
+		console.log("User asked to download draft information.");
+		window.open('data:text/csv,' + encodeURIComponent(pickInfo))
 	}
-	
+
     function getActivePack() {
       console.log(`currentPack: ${currentPack} currentSeat : ${currentSeat} currentPick: ${currentPick}`);
       var direction = (currentPack % 2 == 0) ? 1 : -1;
@@ -258,7 +259,7 @@
     <body>
 
     <input type='file' accept='text/plain' onchange='initializeFromFile(event)'><br>
-	
+
     <p>Current Pack</p>
     <div id="display"></div>
     <div id="picksDisplay"></div>

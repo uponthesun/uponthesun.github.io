@@ -163,9 +163,10 @@
       playerPickDivs.forEach(function(pickDiv) {
         pickDiv.style.display = 'block';
       })
-      
+
       // Display text list of all picks
       var allPicks = document.createElement("textarea");
+	  allPicks.setAttribute("id","PicksToText");
       allPicks.setAttribute("readonly", "");
       allPicks.setAttribute("rows", "8");
       allPicks.setAttribute("cols", "50");
@@ -185,7 +186,22 @@
       }
       allPicks.textContent += allPicksText;
       document.body.insertBefore(allPicks, null);
+	  
+	  //Create button to allow users to download draft information.
+	  var downloadButton = document.createElement("input");
+	  downloadButton.type = "button";
+	  downloadButton.value = "Download!";
+	  var pickValues = document.getElementById('PicksToText').value;
+	  downloadButton.addEventListener('click', function() { downloadPicks(pickValues); },false);
+	  document.body.insertBefore(downloadButton, null);
     }
+
+	//Get the contents of the a string and download them as a text file
+	function downloadPicks(pickInfo)
+	{
+		console.log("User asked to download draft information.");
+		window.open('data:text/csv,' + encodeURIComponent(pickInfo))
+	}
 
     function getActivePack() {
       console.log(`currentPack: ${currentPack} currentSeat : ${currentSeat} currentPick: ${currentPick}`);
@@ -195,7 +211,7 @@
       console.log("activePack:" + index);
       return packs[index];
     }
-
+	
     function toggleDisplay(element) {
       if(element.style.display !== 'none') {
         element.style.display = 'none';
@@ -251,3 +267,4 @@
 
     </body>
     </html>
+	

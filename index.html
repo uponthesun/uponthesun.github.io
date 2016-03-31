@@ -6,7 +6,7 @@
     const NUM_PLAYERS = 6;
     const NUM_PACKS = 3;
     const CARDS_PER_PACK = 15;
-    const DEFAULT_CUBE_FILE = "winstons_cube_3-4-2016.txt";
+    const DEFAULT_CUBE_FILE = "winstons_cube_3-6-2016.txt";
     var cubeList;
     var packs;
     var playerPicks;
@@ -58,7 +58,7 @@
       currentPick = 0;
       currentSeat = 0;
 
-      cubeList = rawCubeList.split('\n');
+      cubeList = rawCubeList.split('\n').filter(function(line){ return line.trim() != "" }); // remove any empty or all-whitespace lines
       shuffleArray(cubeList);
 
       // Create all of the packs to be used in the draft.

@@ -3,60 +3,55 @@ Doomed Traveler
 Icatian Javelineers
 Isamaru, Hound of Konda
 Shade of Trokair
-Steppe Lynx
 Thraben Inspector
+Topplegeist
 Weathered Wayfarer
 Ainok Bond-Kin
 Daring Skyjek
 Eight-and-a-Half-Tails
-Inquisitor Exarch
 Kor Skyfisher
 Master of Pearls
 Myrsmith
-Serra Avenger
+Puresteel Paladin
+Restoration Specialist
 Stoneforge Mystic
 Syndic of Tithes
 Abzan Falconer
 Attended Knight
+Defender of the Order
 Flickerwisp
 Jotun Owl Keeper
 Kor Hookmaster
+Mangara of Corondor
 Mentor of the Meek
-Order of Whiteclay
 Stonecloaker
 Academy Rector
-Calciderm
 Emeria Angel
-Glimmerpoint Stag
 Leonin Battlemage
 Magus of the Disk
 Ranger of Eos
 Reveillark
 World Queller
 Yosei, the Morning Star
-Angel of Glory's Rise
 Eternal Dragon
 Sanctum Gargoyle
 Dispeller's Capsule
 Scepter of Dominance
-Ajani's Presence
-Brave the Elements
-Condemn
+Emerge Unscathed
 Faith's Shield
 Path to Exile
 Scout's Warning
 Disenchant
+Judge Unworthy
 Unexpectedly Absent
-Valorous Stance
 Ghostway
 Midnight Haunting
+Skywhaler's Shot
 Faith's Reward
 Miraculous Recovery
 Angelic Purge
-Day of Judgment
 Death or Glory
 Hallowed Burial
-Austere Command
 Open the Vaults
 Return to the Ranks
 Gelid Shackles
@@ -64,16 +59,19 @@ Gryff's Boon
 Inheritance
 Myth Realized
 Hoofprints of the Stag
+Planar Collapse
 Oblivion Ring
 Promise of Bunrei
+Endless Horizons
 Faith's Fetters
 Marshal's Anthem
 Enclave Cryptologist
 Wingcrafter
 Azure Mage
 Chief Engineer
-Coralhelm Commander
+Cloud of Faeries
 Jeskai Elder
+Jeskai Sage
 Lighthouse Chronologist
 Looter il-Kor
 Merfolk Looter
@@ -86,16 +84,14 @@ Maelstrom Djinn
 Man-o'-War
 Pestermite
 Silumgar Sorcerer
-Stitched Drake
 Tandem Lookout
 Trinket Mage
-Vendilion Clique
 Vesuvan Shapeshifter
 Archaeomancer
 Fatestitcher
 Mistfire Adept
 Venser, Shaper Savant
-Wing Splicer
+Wretched Gryff
 Aeon Chronicler
 Mnemonic Wall
 Mulldrifter
@@ -107,7 +103,9 @@ Skill Borrower
 Spire Golem
 Banishing Knack
 Brainstorm
+Mystical Tutor
 Unsummon
+Arcane Denial
 Condescend
 Into the Roil
 Mana Leak
@@ -121,48 +119,44 @@ Dissolve
 Hinder
 Repeal
 Thirst for Knowledge
-Cryptic Command
 Gifts Ungiven
+Paradoxical Outcome
 Turnabout
 Gush
-Opportunity
+Jace's Ingenuity
 Dig Through Time
 Hidden Strings
 Compulsive Research
 Deep Analysis
 Notorious Throng
-Time Warp
+Breakthrough
 Mass Polymorph
 Dance of Many
 Homarid Spawning Bed
 Military Intelligence
-Day of the Dragons
-Thassa, God of the Sea
 Carrion Feeder
 Cruel Sadist
-Shadow Alley Denizen
+Cryptbreaker
 Viscera Seer
 Asylum Visitor
 Blood Artist
 Bloodghast
 Carrionette
+Festercreep
 Heir of Falkenrath
-Knight of Infamy
 Nether Traitor
 Oona's Prowler
 Pain Seer
-Silumgar Assassin
 Soldevi Adnate
-Vampire Hexmage
-Ambuscade Shaman
 Grim Haruspex
 Nantuko Husk
 Phyrexian Rager
 Stinkweed Imp
+Vampire Envoy
+Wakedancer
 Xathrid Necromancer
 Crypt Ghast
 Disciple of Bolas
-Disciple of Phenax
 Entomber Exarch
 Marsh Flitter
 Necrotic Ooze
@@ -172,30 +166,33 @@ Shadowborn Demon
 Shriekmaw
 Sidisi, Undead Vizier
 Extractor Demon
-Kokusho, the Evening Star
 Skeletal Vampire
+Soulflayer
 Rune-Scarred Demon
-Tombstalker
 Liliana of the Dark Realms
 Executioner's Capsule
+Ring of Xathrid
 Burnt Offering
 Disfigure
 Tragic Slip
-Devour Flesh
 Go for the Throat
 Grim Harvest
 Last Gasp
+Essence Extraction
 Murder
 Slaughter Pact
 Hideous Laughter
 Makeshift Mannequin
 Murderous Cut
+Death Wind
 Skeletal Scrying
 Cabal Therapy
+Cry of Contrition
 Duress
-Organ Harvest
 Thoughtseize
+Unearth
 Demonic Tutor
+Kiku's Shadow
 Read the Bones
 Yawgmoth's Will
 Damnation
@@ -203,95 +200,92 @@ Dread Return
 Gild
 Sever the Bloodline
 Endless Obedience
-Consume Spirit
 Diabolic Revelation
 Quest for the Gravelord
+Soul Stair Expedition
 Underworld Connections
-Erebos's Emissary
 Greater Gargadon
 Jackal Pup
 Monastery Swiftspear
 Scorched Rusalka
 Stonewright
 Abbot of Keral Keep
-Akoum Stonewaker
 Ember Hauler
 Firefist Striker
 Humble Defector
-Ire Shaman
 Kruin Striker
 Lightning Mauler
 Mogg War Marshal
+Soulbright Flamekin
 Stingscourger
+War-Name Aspirant
 Young Pyromancer
 Akroma, Angel of Fury
-Goblin Heelcutter
 Guttersnipe
+Hanweir Lancer
 Hissing Iguanar
 Imperial Recruiter
-Inner-Flame Acolyte
+Ire Shaman
 Pyreheart Wolf
 Pyrewild Shaman
 Starke of Rath
+Stromkirk Occultist
 Thopter Engineer
 Anger
-Ashcloud Phoenix
-Firewing Phoenix
 Fledgling Dragon
 Kurkesh, Onakke Ancient
+Stone Giant
 Treasonous Ogre
 Arc-Slogger
 Emrakul's Hatcher
 Flamerush Rider
-Glarewielder
-Siege-Gang Commander
 Flayer of the Hatebound
 Chancellor of the Forge
 Bogardan Hellkite
+Bomat Courier
 Bosh, Iron Golem
 Pyrite Spellbomb
 Brute Force
 Burst Lightning
+Lightning Axe
 Lightning Bolt
+Otherworldly Outburst
 Battle Hymn
-Fury Charm
 Incinerate
 Magma Jet
-Brimstone Volley
-Char
-Grab the Reins
+Flame Javelin
 Stoke the Flames
 Commune with Lava
-Starstorm
 Devastating Summons
 Faithless Looting
 Pillar of Flame
 Dragon Fodder
 Fire Ambush
+Grapeshot
 Tormenting Voice
 Twinflame
 Rift Bolt
-Trash for Treasure
 Empty the Warrens
-Demonfire
 Earthquake
 Blasphemous Act
+Veteran's Voice
 Braid of Fire
+Dual Casting
+Galvanic Arc
 Sneak Attack
 Basking Rootwalla
-Birds of Paradise
 Caustic Caterpillar
+Quirion Ranger
 Budoka Gardener
 Devoted Druid
 Elvish Visionary
 Fauna Shaman
 Jade Mage
 Nest Invader
+Obsessive Skinner
+Quirion Dryad
 Sakura-Tribe Elder
 Satyr Wayfinder
-Scryb Ranger
-Skinshifter
-Wall of Roots
 Werebear
 Wild Mongrel
 Borderland Ranger
@@ -318,10 +312,10 @@ Golgari Grave-Troll
 Nessian Game Warden
 Seedborn Muse
 Seedguide Ash
+Spike Tiller
 Cloudthresher
 Deadwood Treefolk
 Primordial Sage
-Verdeloth the Ancient
 Genesis Hydra
 Regal Force
 Terastodon
@@ -333,6 +327,7 @@ Chord of Calling
 Ancient Stirrings
 Prey Upon
 Search for Tomorrow
+Traverse the Ulvenwald
 Gather the Pack
 Into the North
 Life from the Loam
@@ -340,8 +335,6 @@ Living Wish
 Nostalgic Dreams
 Kodama's Reach
 Primal Command
-Green Sun's Zenith
-Nissa's Renewal
 Exploration
 Lignify
 Food Chain
@@ -349,16 +342,13 @@ Narcissism
 Greater Good
 Saproling Burst
 Azorius Guildmage
-Court Hussar
 Sky Hussar
 Azorius Charm
 Momentary Blink
 Mirrorweave
-Ojutai's Command
 Disciple of Deceit
 Sygg, River Cutthroat
 Psychatog
-Tezzeret, Agent of Bolas
 Puppet Conjurer
 Forbidden Alchemy
 Mystical Teachings
@@ -366,22 +356,19 @@ Rakdos Guildmage
 Lyzolda, the Blood Witch
 Crypt Champion
 Terminate
-Cauldron Dance
 Gruul Guildmage
-Vengeful Rebirth
 Fires of Yavimaya
-Qasali Pridemage
 Safehold Elite
 Saffi Eriksdotter
 Selesnya Guildmage
 Knight of the Reliquary
+Thrill of the Hunt
 Cartel Aristocrat
 Restless Apparition
 Tidehollow Sculler
 Cauldron Haze
-Mortify
+Anguished Unmaking
 Korozda Guildmage
-Hag Hedge-Mage
 Varolz, the Scar-Striped
 Life // Death
 Maelstrom Pulse
@@ -400,15 +387,14 @@ Turn // Burn
 Figure of Destiny
 Boros Guildmage
 Rise of the Hobgoblins
-Bant Charm
 Beck // Call
 Zur the Enchanter
-Grixis Charm
 Rise // Fall
 Etched Oracle
 Reaper King
 Engineered Explosives
 Gathan Raiders
+Chronomaton
 Heap Doll
 Millikin
 Phyrexian Revoker
@@ -416,9 +402,9 @@ Bottle Gnomes
 Cathodion
 Pilgrim's Eye
 Scarecrone
+Scrap Trawler
 Serrated Biskelion
 Wild-Field Scarecrow
-Arcbound Reclaimer
 Galvanic Juggernaut
 Lodestone Myr
 Solemn Simulacrum
@@ -426,20 +412,18 @@ Su-Chi
 Kuldotha Forgemaster
 Triskelion
 Triskelavus
+Paradise Mantle
 Adventuring Gear
 Aether Vial
 Bonesplitter
 Brittle Effigy
-Chromatic Star
 Codex Shredder
 Elixir of Immortality
 Leonin Bola
 Sensei's Divining Top
 Candles of Leng
-Captain's Claws
 Coldsteel Heart
 Contagion Clasp
-Cranial Archive
 Everflowing Chalice
 Guardian Idol
 Mask of Memory
@@ -449,32 +433,34 @@ Prismatic Lens
 Prophetic Prism
 Ratchet Bomb
 Runechanter's Pike
+Sky Skiff
 Veteran's Armaments
 Ashnod's Altar
 Blasting Station
 Druidic Satchel
-Oblivion Stone
+Semblance Anvil
 Chimeric Mass
 Deathrender
-Icy Manipulator
+Haunted Plate Mail
 Trading Post
 Gauntlet of Power
 Memory Jar
 Myr Turbine
 Caged Sun
 Arid Mesa
+Ash Barrens
 Blackcleave Cliffs
 Blood Crypt
 Bloodstained Mire
 Boros Garrison
 Breeding Pool
-Buried Ruin
 Cascade Bluffs
 Celestial Colonnade
 Clifftop Retreat
 Copperline Gorge
 Creeping Tar Pit
 Darkslick Shores
+Dreadship Reef
 Faerie Conclave
 Fetid Heath
 Fire-Lit Thicket
@@ -484,6 +470,7 @@ Ghitu Encampment
 Godless Shrine
 Golgari Rot Farm
 Graven Cairns
+Gruul Turf
 Hallowed Fountain
 Isolated Chapel
 Izzet Boilerworks
@@ -516,7 +503,6 @@ Sulfur Falls
 Sunken Ruins
 Tectonic Edge
 Temple Garden
-Temple of Abandon
 Temple of Deceit
 Temple of Enlightenment
 Temple of Epiphany
@@ -524,7 +510,6 @@ Temple of Malady
 Temple of Mystery
 Temple of Silence
 Temple of Triumph
-Tolarian Academy
 Twilight Mire
 Verdant Catacombs
 Watery Grave

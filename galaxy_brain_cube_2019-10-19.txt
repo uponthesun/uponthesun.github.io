@@ -87,7 +87,6 @@ Vesuvan Shapeshifter
 Archaeomancer
 Cryptic Annelid
 Mistfire Adept
-Venser, Shaper Savant
 Aeon Chronicler
 Mnemonic Wall
 Mulldrifter
@@ -118,6 +117,7 @@ Paradoxical Outcome
 Gush
 Jace's Ingenuity
 Dig Through Time
+Energy Tap
 Hidden Strings
 Compulsive Research
 Crow Storm
@@ -356,6 +356,7 @@ Nucklavee
 Desperate Ravings
 Turn // Burn
 Boros Guildmage
+Leave // Chance
 Rise of the Hobgoblins
 Beck // Call
 Zur the Enchanter

@@ -129,7 +129,7 @@ Metamorphic Alteration
 Military Intelligence
 Carrion Feeder
 Cryptbreaker
-Foulmire Knight // Profane Insight
+Foulmire Knight
 Viscera Seer
 Asylum Visitor
 Blood Artist
@@ -138,7 +138,7 @@ Carrionette
 Nether Traitor
 Olivia's Dragoon
 Oona's Prowler
-Order of Midnight // Alter Fate
+Order of Midnight
 Pain Seer
 Soldevi Adnate
 Grim Haruspex
@@ -178,7 +178,6 @@ Duress
 Thoughtseize
 Demonic Tutor
 Kiku's Shadow
-Ransack the Lab
 Yawgmoth's Will
 Damnation
 Dread Return
@@ -302,11 +301,12 @@ Sylvan Might
 Realms Uncharted
 Collected Company
 Chord of Calling
+Ancient Stirrings
 Prey Upon
-Traverse the Ulvenwald
 Explore
 Gather the Pack
 Life from the Loam
+Nostalgic Dreams
 Primal Command
 Exploration
 Frog Tongue

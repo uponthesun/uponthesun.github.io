@@ -130,7 +130,7 @@ Metamorphic Alteration
 Military Intelligence
 Carrion Feeder
 Cryptbreaker
-Foulmire Knight // Profane Insight
+Foulmire Knight
 Viscera Seer
 Asylum Visitor
 Blood Artist
@@ -139,7 +139,7 @@ Carrionette
 Nether Traitor
 Olivia's Dragoon
 Oona's Prowler
-Order of Midnight // Alter Fate
+Order of Midnight
 Pain Seer
 Soldevi Adnate
 Grim Haruspex

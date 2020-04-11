@@ -14,12 +14,10 @@ Restoration Specialist
 Sram, Senior Edificer
 Stone Haven Outfitter
 Stoneforge Mystic
-Sunstrike Legionnaire
 Abzan Falconer
 Flickerwisp
 Mentor of the Meek
 Nomad Mythmaker
-Pulsemage Advocate
 Stonecloaker
 Tethmos High Priest
 Academy Rector
@@ -36,21 +34,18 @@ Totem-Guide Hartebeest
 Yosei, the Morning Star
 Emeria Shepherd
 Ancestral Blade
-Cogworker's Puzzleknot
 Scepter of Dominance
 Alley Evasion
 Emerge Unscathed
 Gods Willing
 Path to Exile
-Reaping the Rewards
 Tithe
 Judge Unworthy
-Renewed Faith
-Unexpectedly Absent
 Forsake the Worldly
 Ghostway
 Midnight Haunting
 Faith's Reward
+Unexpectedly Absent
 Death or Glory
 Hallowed Burial
 Planar Outburst
@@ -59,7 +54,6 @@ Return to the Ranks
 Gelid Shackles
 Genju of the Fields
 Myth Realized
-All That Glitters
 Gleam of Authority
 Hoofprints of the Stag
 Astral Drift
@@ -68,46 +62,41 @@ Oblivion Ring
 Promise of Bunrei
 Endless Horizons
 Faith's Fetters
-Sage's Reverie
 Marshal's Anthem
+Sage's Reverie
 Song of the Worldsoul
-Mistveil Plains
 Enclave Cryptologist
 Screeching Sliver
 Wingcrafter
 Azure Mage
-Cephalid Illusionist
 Chief Engineer
 Cloud of Faeries
+Fathom Seer
 Lighthouse Chronologist
 Looter il-Kor
 Merfolk Looter
 Nightveil Sprite
-Riftwing Cloudskate
 Snapcaster Mage
 Watcher for Tomorrow
 Chasm Skulker
-Fathom Seer
-Flux Channeler
 Grand Architect
 Laboratory Maniac
-Maelstrom Djinn
 Man-o'-War
-Sage's Row Denizen
-Simic Fluxmage
 Tandem Lookout
 Trinket Mage
-Vesuvan Shapeshifter
 Archaeomancer
 Mistfire Adept
 Aeon Chronicler
 Mnemonic Wall
 Mulldrifter
 Peregrine Drake
+Riftwing Cloudskate
 River Kelpie
 Sage of the Falls
+Vesuvan Shapeshifter
 Great Whale
 Kederekt Leviathan
+Maelstrom Djinn
 Spire Golem
 Flight Spellbomb
 Banishing Knack
@@ -125,22 +114,20 @@ Cackling Counterpart
 Dissipate
 Dissolve
 Hinder
-Repeal
 Thirst for Knowledge
 Gifts Ungiven
 Paradoxical Outcome
 Gush
 Jace's Ingenuity
+Repeal
 Dig Through Time
 Shared Discovery
 Hidden Strings
 Compulsive Research
 Crow Storm
 Deep Analysis
-Breakthrough
 Mass Polymorph
 Dance of Many
-Flooded Shoreline
 Homarid Spawning Bed
 Metamorphic Alteration
 Military Intelligence
@@ -148,8 +135,6 @@ Phantom Wings
 Arcane Adaptation
 Carrion Feeder
 Cryptbreaker
-Ruthless Sniper
-Shadow Alley Denizen
 Viscera Seer
 Asylum Visitor
 Blood Artist
@@ -171,6 +156,7 @@ Stinkweed Imp
 Tomb Robber
 Toshiro Umezawa
 Xathrid Necromancer
+Crypt Champion
 Crypt Ghast
 Disciple of Bolas
 Entomber Exarch
@@ -187,7 +173,7 @@ Rune-Scarred Demon
 Razaketh, the Foulblooded
 Liliana of the Dark Realms
 Wishclaw Talisman
-Immortal Coil
+Slaughter Pact
 Disfigure
 Tragic Slip
 Go for the Throat
@@ -195,17 +181,14 @@ Grim Harvest
 Smother
 Essence Extraction
 Murder
-Slaughter Pact
 Makeshift Mannequin
 Vraska's Contempt
 Murderous Cut
 Cabal Therapy
 Duress
 Thoughtseize
-Unearth
 Demonic Tutor
 Kiku's Shadow
-Sickening Dreams
 Stitch Together
 Read the Bones
 Yawgmoth's Will
@@ -214,12 +197,10 @@ Dread Return
 Endless Obedience
 Quest for the Gravelord
 Soul Stair Expedition
-Call the Bloodline
 Chime of Night
 Heartless Summoning
 Mourning
 Casting of Bones
-Greater Gargadon
 Jackal Pup
 Monastery Swiftspear
 Scorched Rusalka
@@ -234,11 +215,9 @@ Humble Defector
 Kruin Striker
 Lightning Mauler
 Mogg War Marshal
-Slobad, Goblin Tinkerer
 Soulbright Flamekin
 Stingscourger
 Young Pyromancer
-Akroma, Angel of Fury
 Guttersnipe
 Hissing Iguanar
 Hollowhead Sliver
@@ -248,15 +227,17 @@ Pyreheart Wolf
 Quicksmith Genius
 Spiteful Sliver
 Anger
-Flamerush Rider
 Fledgling Dragon
 Kurkesh, Onakke Ancient
 Treasonous Ogre
 Arc-Slogger
 Emrakul's Hatcher
+Flamerush Rider
 Flayer of the Hatebound
 Chancellor of the Forge
+Akroma, Angel of Fury
 Bogardan Hellkite
+Greater Gargadon
 Jaya, Venerated Firemage
 Bomat Courier
 Bosh, Iron Golem
@@ -270,7 +251,6 @@ Harvest Pyre
 Incinerate
 Magma Jet
 Flame Javelin
-Reiterate
 Stoke the Flames
 Commune with Lava
 Devastating Summons
@@ -283,11 +263,8 @@ Grapeshot
 Twinflame
 Rift Bolt
 Empty the Warrens
-Reforge the Soul
 Earthquake
 Blasphemous Act
-Veteran's Voice
-Betrothed of Fire
 Braid of Fire
 Dual Casting
 Galvanic Arc
@@ -306,7 +283,6 @@ Obsessive Skinner
 Quirion Dryad
 Sakura-Tribe Elder
 Satyr Wayfinder
-Scryb Ranger
 Sheltering Ancient
 Syr Faren, the Hengehammer
 Werebear
@@ -314,10 +290,7 @@ Wild Mongrel
 Civic Wayfinder
 Eternal Witness
 Fertilid
-Hystrodon
-Loaming Shaman
 Scourge of Skola Vale
-Spike Feeder
 Splinterfright
 Wolfir Avenger
 Briarhorn
@@ -329,6 +302,7 @@ Oracle of Mul Daya
 World Shaper
 Deranged Hermit
 Golgari Grave-Troll
+Hystrodon
 Nessian Game Warden
 Seedborn Muse
 Spike Tiller
@@ -353,7 +327,6 @@ Life from the Loam
 Nostalgic Dreams
 Exploration
 Frog Tongue
-Gaea's Touch
 Kenrith's Transformation
 Lignify
 Season of Growth
@@ -365,7 +338,6 @@ Perilous Forays
 Saproling Burst
 Eidolon of Blossoms
 Azorius Guildmage
-Council of the Absolute
 Momentary Blink
 Aethermage's Touch
 Mirrorweave
@@ -376,11 +348,8 @@ Psychatog
 Forbidden Alchemy
 Mystical Teachings
 Acidic Sliver
-Jagged Poppet
-Crypt Champion
 Terminate
 Gruul Guildmage
-Ruination Rioter
 Ulasht, the Hate Seed
 Fires of Yavimaya
 Saffi Eriksdotter
@@ -400,7 +369,6 @@ Cadaverous Bloom
 Zameck Guildmage
 Dormant Sliver
 Horizon Chimera
-Kydele, Chosen of Kruphix
 Snakeform
 Ongoing Investigation
 Nivmagus Elemental
@@ -409,7 +377,6 @@ Goblin Electromancer
 Nucklavee
 Desperate Ravings
 Boros Guildmage
-Sunforger
 Leave // Chance
 Rise of the Hobgoblins
 Beck // Call
@@ -437,9 +404,8 @@ Su-Chi
 Kuldotha Forgemaster
 Psychosis Crawler
 Wicker Warcrawler
-Composite Golem
 Triskelavus
-Bone Saw
+Everflowing Chalice
 Paradise Mantle
 Adventuring Gear
 Aether Vial
@@ -451,7 +417,6 @@ Leonin Bola
 Sensei's Divining Top
 Coldsteel Heart
 Contagion Clasp
-Everflowing Chalice
 Guardian Idol
 Mask of Memory
 Mind Stone
@@ -464,9 +429,9 @@ Veteran's Armaments
 Ashnod's Altar
 Blasting Station
 Inspiring Statuary
-Chimeric Mass
 Deathrender
 Trading Post
+Chimeric Mass
 Gauntlet of Power
 Memory Jar
 Myr Turbine
@@ -491,11 +456,11 @@ Graven Cairns
 Hallowed Fountain
 Hinterland Harbor
 Hissing Quagmire
-Holdout Settlement
 Isolated Chapel
 Lavaclaw Reaches
 Lumbering Falls
 Marsh Flats
+Mistveil Plains
 Misty Rainforest
 Mouth of Ronom
 Mutavault

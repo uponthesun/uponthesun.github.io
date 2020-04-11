@@ -21,6 +21,7 @@ Nomad Mythmaker
 Stonecloaker
 Tethmos High Priest
 Academy Rector
+Auriok Salvagers
 Emeria Angel
 Kor Cartographer
 Leonin Battlemage
@@ -189,7 +190,7 @@ Duress
 Thoughtseize
 Demonic Tutor
 Kiku's Shadow
-Stitch Together
+Macabre Waltz
 Read the Bones
 Yawgmoth's Will
 Damnation
@@ -201,6 +202,7 @@ Chime of Night
 Heartless Summoning
 Mourning
 Casting of Bones
+Gravebreaker Lamia
 Jackal Pup
 Monastery Swiftspear
 Scorched Rusalka
@@ -212,6 +214,7 @@ Dreadhorde Arcanist
 Ember Hauler
 Firefist Striker
 Humble Defector
+Hunter Sliver
 Kruin Striker
 Lightning Mauler
 Mogg War Marshal

@@ -222,7 +222,7 @@
     }
 
     function createCardImageTag(cardName) {
-      var imageUrl = `http://gatherer.wizards.com/Handlers/Image.ashx?name=${cardName}&type=card`;
+      var imageUrl = `https://api.scryfall.com/cards/named?format=image&exact=${cardName}`;
 
       var imageTag = document.createElement("img");
       imageTag.setAttribute("src", imageUrl);
